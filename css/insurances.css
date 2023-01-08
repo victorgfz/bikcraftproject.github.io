@@ -1,0 +1,70 @@
+.insurances {
+    background-color: var(--third-bg);
+    position: relative;
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+.insurances-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.insurances-type {
+    max-width: 540px;
+    width: 100%;
+    padding: 36px 48px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: var(--first-bg);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ins-type-title {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.ins-type-qualities {
+    display: grid;
+    gap: 24px;
+}
+
+.ins-type-qualities li {
+    font-size: 1rem;
+    position: relative;
+}
+
+.ins-type-qualities li::before {
+    content: " ....";
+    background-image: url("/img/icones/lista.svg");
+    background-repeat: no-repeat;
+    max-width: 100%;
+    position: absolute;
+    left: -20px;
+    top: 4px;
+    color: var(--third-color);
+}
+
+.ins-type-price {
+    text-align: right;
+    font-size: 2rem;
+}
+
+.ins-type-period {
+    text-align: right;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 500px) {
+    .ins-type-price {
+        text-align: right;
+        font-size: 1.5rem;
+    }
+}

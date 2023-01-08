@@ -1,0 +1,156 @@
+.bicicletas-title {
+    background-color: var(--fifth-color);
+    position: relative;
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+
+.bic-title-subtitle {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    padding-bottom: 12px;
+}
+
+.bic-title-detail {
+
+    position: absolute;
+    right: 40px;
+    top: 0;
+}
+
+.bic-bic-model {
+    padding-top: 64px;
+    padding-bottom: 64px;
+    position: relative;
+}
+
+.bbm-info {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 24px;
+    padding-bottom: 36px;
+    position: relative;
+}
+
+.bbm-title {
+    font-size: 2rem;
+    position: relative;
+    text-align: left;
+}
+
+.bbm-title::before {
+    content: "";
+    width: 12px;
+    height: 8px;
+    background-color: var(--first-color);
+    display: block;
+    margin-bottom: 24px;
+}
+
+.bbm-description {
+    font-size: 1rem;
+    text-align: left;
+    grid-column: 1/-1;
+
+}
+
+.bbm-qualities {
+    display: grid;
+    gap: 12px;
+}
+
+.bbm-qualities li {
+    display: flex;
+    gap: 12px;
+}
+
+.bbm-qualities li img {
+    width: 24px;
+    height: 24px;
+}
+
+.bbm-qualities li p {
+    margin-top: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.bbm-btn {
+    align-items: center;
+    display: flex;
+    place-self: end;
+}
+
+.bbm-btn::after {
+    content: "";
+    display: inline-block;
+    background: url(/img/icones/seta.svg);
+    position: relative;
+    width: 18px;
+    height: 10px;
+    margin-left: 12px;
+    transition: 200ms;
+}
+
+.bbm-btn:hover::after {
+    transform: translateX(4px);
+}
+
+.bbm-img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.bbm-price {
+    position: absolute;
+    background-color: var(--first-bg);
+    font-size: 1.125rem;
+    padding: 12px 8px;
+    border-radius: 4px;
+    right: 0;
+    top: 24px;
+}
+
+.bic-bic-bg {
+    background: linear-gradient(to right, var(--second-color) 30%, var(--fifth-color) 0%);
+}
+
+@media (max-width: 1000px) {
+    .bic-title-subtitle {
+        font-size: 1.25rem;
+        text-align: center;
+    }
+
+    .bbm-info {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 24px;
+        padding-bottom: 0;
+    }
+
+    .bic-bic-bg {
+        background: var(--fifth-color);
+    }
+}
+
+@media (max-width: 600px) {
+    .bic-title-detail {
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .bbm-qualities {
+        grid-template-columns: 1fr 1fr;
+        grid-column: 1 / -1;
+    }
+
+    .bbm-btn {
+        place-self: start;
+    }
+}

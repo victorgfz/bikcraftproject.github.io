@@ -1,0 +1,250 @@
+.contato-title {
+    background-color: var(--fifth-color);
+    position: relative;
+    box-shadow: inset 0 -400px rgb(240, 240, 240);
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+
+.ctt-title-subtitle {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    padding-bottom: 12px;
+}
+
+.ctt-title-detail {
+    position: absolute;
+    right: 40px;
+    top: 0;
+}
+
+.contato-title-content {
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    box-sizing: border-box;
+}
+
+.ctc-loja {
+    border-radius: 4px 0 0 4px;
+    background-color: var(--first-bg);
+    padding: 64px;
+}
+
+.ctcl-title {
+    font-size: 1.125rem;
+    font-weight: 400;
+    text-align: left;
+    margin-bottom: 64px;
+}
+
+.ctcl-adress {
+    background: url(/img/icones/local.svg) no-repeat;
+    margin-bottom: 36px;
+}
+
+.ctcl-adress li {
+    padding-left: 30px;
+    margin-bottom: 12px;
+
+    font-size: 1rem;
+    font-weight: 300;
+    text-align: left;
+}
+
+.ctcl-mail {
+    background: url(/img/icones/email.svg) no-repeat;
+    margin-bottom: 36px;
+}
+
+.ctcl-mail li {
+    padding-left: 30px;
+    margin-bottom: 12px;
+
+    font-size: 1rem;
+    font-weight: 300;
+    text-align: left;
+}
+
+.ctcl-mail li a {
+    color: inherit;
+}
+
+.ctcl-phone {
+    background: url(/img/icones/telefone.svg) no-repeat;
+    margin-bottom: 64px;
+}
+
+.ctcl-phone li {
+    padding-left: 30px;
+    margin-bottom: 12px;
+
+    font-size: 1rem;
+    font-weight: 300;
+    text-align: left;
+}
+
+.ctcl-phone li a {
+    color: inherit;
+}
+
+.ctcl-social {
+    padding-left: 30px;
+    display: flex;
+    gap: 24px;
+}
+
+.ctc-form {
+    background-color: var(--second-bg);
+    padding: 64px;
+    border-radius: 0 4px 4px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.ctcf-name label,
+.ctcf-phone label,
+.ctcf-mail label,
+.ctcf-msg label {
+    display: block;
+    font-size: 1rem;
+    padding-bottom: 8px;
+    box-sizing: border-box;
+}
+
+.ctcf-name input,
+.ctcf-phone input,
+.ctcf-mail input,
+.ctcf-msg textarea {
+    background-color: rgb(250, 250, 250);
+    border: 1px solid rgb(243, 243, 243);
+    color: var(--fifth-color);
+    font-size: 1rem;
+    box-sizing: border-box;
+    padding: 12px;
+    border-radius: 4px;
+    width: 100%;
+}
+
+
+.ctcf-mail,
+.ctcf-msg {
+    grid-column: span 2;
+}
+
+.ctt-btn {
+    grid-column: 1 / -1;
+    place-self: start;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    outline: none;
+    background-color: var(--second-bg);
+    border-color: var(--first-color);
+    box-shadow: 0 0 4px var(--first-color-d);
+}
+
+.contato-lojas-locais {
+    background-color: rgb(240, 240, 240);
+    position: relative;
+    padding-top: 24px;
+    padding-bottom: 96px;
+}
+
+.cll-item {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    box-shadow: 0px 2px 5px var(--fourth-color);
+}
+
+.cll-info {
+    padding: 36px;
+    background-color: var(--second-bg);
+    box-sizing: border-box;
+    border-radius: 0 0 4px 4px;
+}
+
+.cll-item img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 4px 4px 0 0;
+}
+
+.cll-title {
+    font-size: 2rem;
+    margin-bottom: 24px;
+}
+
+.cll-adress-ctt {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.cll-adress li,
+.cll-ctt li {
+    margin-top: 6px;
+    margin-bottom: 6px;
+    font-size: 1rem;
+}
+
+.cll-ctt li a {
+    color: inherit;
+}
+
+.cll-adress,
+.cll-ctt {
+    position: relative;
+    padding-left: 12px;
+    border-left: 2px solid rgb(230, 230, 230);
+}
+
+
+.cll-schedule {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+
+
+@media (max-width: 1000px) {
+    .ctt-title-subtitle {
+        font-size: 1.25rem;
+        text-align: center;
+    }
+
+    .contato-title-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        box-sizing: border-box;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .ctt-title-detail {
+        display: none;
+    }
+
+    .ctc-loja,
+    .ctc-form {
+        padding: 36px;
+    }
+
+    .ctcl-title,
+    .ctcl-phone {
+        margin-bottom: 36px;
+    }
+
+    .cll-adress-ctt {
+        grid-template-columns: 1fr;
+    }
+
+}

@@ -1,0 +1,57 @@
+.bikes {
+    background-color: var(--second-bg);
+    position: relative;
+    margin-bottom: 96px;
+}
+
+.bikes-list {
+    display: flex;
+    gap: 40px;
+    overflow-x: auto;
+    padding-bottom: 36px;
+}
+
+.bikes-bike {
+    min-width: 280px;
+}
+
+.bikes-bike img {
+
+    width: 100%;
+    max-width: none;
+    object-fit: cover;
+}
+
+.bikes-subtitle {
+    position: relative;
+    margin: 20px 0 10px 0;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.bikes-subtitle a {
+    color: var(--third-color);
+}
+
+.bikes-price {
+    padding: 0 20px;
+    font-size: 1.125rem;
+    color: var(--fifth-color);
+    font-weight: 400;
+}
+
+
+.bikes-subtitle::before {
+    content: "";
+    display: inline-block;
+    margin-right: 4px;
+    width: 16px;
+    height: 8px;
+    transition: width 200ms;
+    background-color: var(--first-color);
+}
+
+.bikes-subtitle:hover::before {
+    width: 24px;
+}

@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+    border-radius: 4px;
+}
+
+button {
+    border: none;
+}
+
+
+
+:root {
+    --first-color: #fb0;
+    --first-color-d: #e29f0d;
+    --second-color: #fff;
+    --third-color: #000;
+    --fourth-color: #bbb;
+    --fifth-color: #111;
+
+
+    --first-bg: #000;
+    --second-bg: #fff;
+    --third-bg: #111;
+
+}
+
+.first-color {
+    color: var(--first-color);
+}
+
+.second-color {
+    color: var(--second-color);
+}
+
+.third-color {
+    color: var(--third-color);
+}
+
+.fourth-color {
+    color: var(--fourth-color);
+}
+
+.fifth-color {
+    color: var(--fifth-color);
+}
+
+.container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.padding {
+    padding: 0px 40px;
+}
+
+.margin-bottom {
+    margin-bottom: 36px;
+}
+
+.margin-top {
+    margin-top: 36px;
+}
+
+.container2 {
+    max-width: 1400px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+
+}
+
+.title {
+    text-align: left;
+    font-size: 4rem;
+    line-height: 1.125;
+    font-weight: 600;
+}
+
+.description {
+    color: var(--fourth-color);
+    font-size: 1.5rem;
+    line-height: 1.5;
+    max-width: 40ch;
+
+}
+
+.btn {
+    color: var(--fifth-color);
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 4px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: 400ms;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.first-bg-btn {
+    background-color: var(--first-color);
+}
+
+.second-bg-btn {
+    background-color: var(--second-color);
+}
+
+.first-bg-btn:hover {
+    background-color: var(--first-color-d);
+}
+
+.second-bg-btn:hover {
+    background-color: var(--fourth-color);
+}
+
+.js .fadeInDown {
+    transform: translate3d(0, -20px, 0);
+}
+
+.js .fadeInUp {
+    transform: translate3d(0, 20px, 0);
+}
+
+.js .fadeInRight {
+    transform: translate3d(20px, 0, 0);
+}
+
+.js .fadeInLeft {
+    transform: translate3d(-20px, 0, 0);
+}
+
+.js [data-anime] {
+    opacity: 0;
+}
+
+.js .anime {
+    opacity: 1;
+    transform: none;
+    transition: transform 0.8s, opacity 0.8s;
+}
+
+@media (max-width: 1200px) {
+    .margin-bottom {
+        margin-bottom: 24px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .title {
+        font-size: 3rem;
+    }
+
+    .description {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    .description {
+        max-width: 60ch;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .title {
+        font-size: 3rem;
+    }
+}

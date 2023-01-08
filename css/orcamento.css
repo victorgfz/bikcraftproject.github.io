@@ -1,0 +1,284 @@
+.orcamento-title {
+    background-color: var(--fifth-color);
+    position: relative;
+    box-shadow: inset 0 -400px rgb(240, 240, 240);
+    padding-top: 64px;
+    padding-bottom: 120px;
+}
+
+
+.orc-title-subtitle {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    padding-bottom: 12px;
+}
+
+.orc-title-detail {
+    position: absolute;
+    right: 40px;
+    top: 0;
+}
+
+.orcamento-title-content {
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    box-sizing: border-box;
+}
+
+.orc-prod-form {
+    border-radius: 4px 0 0 4px;
+    background-color: var(--first-bg);
+    padding: 64px;
+}
+
+.orc-product {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: start;
+    gap: 24px;
+
+}
+
+.orc-product>* {
+    grid-column: 1 /-1;
+}
+
+.orc-product>label {
+    grid-column: initial;
+}
+
+.orc-product label {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--fourth-color);
+    background-color: var(--fifth-color);
+    padding: 12px 16px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid var(--fifth-color);
+}
+
+.orc-product label::before {
+    content: "";
+    display: inline-block;
+    box-sizing: border-box;
+    width: 12px;
+    height: 12px;
+    border: 1px solid var(--fourth-color);
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.orc-product label:hover {
+    background-color: rgb(35, 35, 35);
+}
+
+.orc-product input:focus+label {
+    box-shadow: 0 0 1px 1px var(--first-color-d);
+    border-color: var(--first-color);
+
+}
+
+.orc-product label p {
+    display: none;
+}
+
+.orc-product input:checked+label p {
+    display: inline-block;
+}
+
+.orc-product input[type="radio"] {
+    opacity: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.orc-product input:checked+label {
+    background-color: var(--second-bg);
+    color: var(--fifth-color);
+}
+
+.orc-product input:checked+label::before {
+    border-color: var(--fifth-color);
+    box-shadow: inset 0 0 0 3px var(--second-bg), inset 0 0 0 6px var(--fifth-color);
+}
+
+.orc-prod-content {
+    display: none;
+}
+
+.orc-prod-content h3 {
+    margin-top: 24px;
+}
+
+#bikcraft:checked~#orc-bikcraft,
+#seguro:checked~#orc-seguro {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.orc-bike-nimbus,
+.orc-bike-magic,
+.orc-bike-nebula {
+    background-color: var(--second-bg);
+    display: none;
+    box-sizing: border-box;
+    padding: 24px;
+    border-radius: 4px;
+}
+
+#nimbus:checked~.orc-bike-nimbus,
+#magic:checked~.orc-bike-magic,
+#nebula:checked~.orc-bike-nebula {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.orc-bike-nimbus img,
+.orc-bike-magic img,
+.orc-bike-nebula img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.orc-bike-details {
+    display: grid;
+    gap: 6px;
+}
+
+.orc-bike-details li {
+    font-size: 0.8rem;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.orc-bike-details li img {
+    width: 16px;
+    height: 16px;
+}
+
+.orc-form {
+    background-color: var(--second-bg);
+    padding: 64px;
+    border-radius: 0 4px 4px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.of-name label,
+.of-subname label,
+.of-mail label,
+.of-cpf label,
+.of-cep label,
+.of-number label,
+.of-street label,
+.of-district label,
+.of-city label,
+.of-state label {
+    display: block;
+    font-size: 1rem;
+    padding-bottom: 8px;
+    box-sizing: border-box;
+}
+
+.of-name input,
+.of-subname input,
+.of-mail input,
+.of-cpf input,
+.of-cep input,
+.of-number input,
+.of-street input,
+.of-district input,
+.of-city input,
+.of-state input {
+    background-color: rgb(250, 250, 250);
+    border: 1px solid rgb(243, 243, 243);
+    color: var(--fifth-color);
+    font-size: 1rem;
+    box-sizing: border-box;
+    padding: 12px;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.orc-form-class {
+    position: relative;
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 0.75rem;
+}
+
+.orc-form-class::before {
+    content: "";
+    width: 4px;
+    height: 12px;
+    background-color: var(--first-color);
+    position: absolute;
+    left: -12px;
+    top: 0;
+}
+
+.orc-form-class,
+.of-mail,
+.of-cpf {
+    grid-column: span 2;
+}
+
+.of-mail {
+    margin-bottom: 12px;
+}
+
+.ctt-btn {
+    grid-column: 1 / -1;
+    place-self: start;
+}
+
+
+@media (max-width: 1000px) {
+    .orc-title-subtitle {
+        font-size: 1.25rem;
+        text-align: center;
+    }
+
+    .orcamento-title-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        box-sizing: border-box;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .orc-title-detail {
+        display: none;
+    }
+
+    .orc-prod-form {
+        padding: 36px;
+    }
+
+    .orc-form {
+        grid-template-columns: 1fr;
+        padding: 36px;
+    }
+
+    .orc-form-class,
+    .of-mail,
+    .of-cpf {
+        grid-column: 1;
+    }
+
+    .grid-fix {
+        grid-column: 1/-1;
+    }
+
+}

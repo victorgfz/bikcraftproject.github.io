@@ -1,0 +1,194 @@
+.modelos {
+    background-color: var(--third-bg);
+    position: relative;
+    padding-top: 64px;
+    padding-bottom: 64px;
+    margin-bottom: 64px;
+}
+
+
+.mod-title-subtitle {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    padding-bottom: 12px;
+}
+
+
+.grid-modelos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.mod-title-detail {
+    position: absolute;
+    right: 40px;
+    top: 0;
+}
+
+.mod-main-imgs {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 24px;
+}
+
+.mod-main-imgs img {
+    min-width: 200px;
+    flex: 1;
+}
+
+.mod-main-imgs img:first-child {
+    min-width: 100%;
+}
+
+.mod-main-info {
+    display: grid;
+    gap: 36px;
+}
+
+.mmi-btn {
+    display: flex;
+    gap: 12px;
+
+}
+
+.mmi-details {
+    display: grid;
+    gap: 6px;
+
+}
+
+.mmi-details li {
+    display: flex;
+    gap: 6px;
+    padding: 4px 8px;
+    background-color: var(--first-bg);
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    place-self: start;
+}
+
+.mmi-subtitle {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    text-align: left;
+    margin-bottom: 12px;
+}
+
+.mmi-info-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+
+    background-color: var(--first-bg);
+    position: relative;
+    padding: 36px;
+    border-radius: 4px;
+}
+
+.mmi-info-details img {
+    margin-bottom: 12px;
+    width: 24px;
+    height: 24px;
+}
+
+.mmi-info-details h3 {
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.mmi-info-details p {
+    font-size: 0.9rem;
+    text-align: left;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.mmi-ficha-details {
+    display: grid;
+    gap: 12px;
+    background-color: var(--first-bg);
+    position: relative;
+    padding: 36px;
+    border-radius: 4px;
+}
+
+.mmi-ficha-details li {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 6px;
+}
+
+.mmi-ficha-details li:not(:last-child) {
+    border-bottom: 1px solid var(--fifth-color);
+}
+
+.modelos-seguro {
+    background-color: var(--fifth-color);
+    position: relative;
+    box-shadow: inset 0px 100px var(--second-bg), inset 0px -100px var(--first-bg);
+
+}
+
+.mod-seg-info {
+    padding: 100px 0;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+
+@media (max-width: 1000px) {
+    .grid-modelos {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .mod-main-info {
+        grid-row: 1;
+    }
+
+    .mod-title-subtitle {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .mmi-btn {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .modelos-seguro {
+        box-shadow: inset 0px 100px var(--second-bg), inset 0px -100px var(--fifth-color);
+    }
+
+    .mod-seg-info {
+        text-align: center;
+        padding: 24px;
+        margin-top: -36px;
+        margin-bottom: 0;
+    }
+
+    .introduction-img {
+        align-self: center;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .mod-title-detail {
+        display: none;
+    }
+
+    .mmi-details li {
+        padding: 4px 6px;
+
+        font-size: 0.7rem;
+    }
+
+}

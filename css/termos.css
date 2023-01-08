@@ -1,0 +1,58 @@
+.termos-title {
+    background-color: var(--fifth-color);
+    position: relative;
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+
+.tec-title-subtitle {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    padding-bottom: 12px;
+}
+
+.tec-title-detail {
+
+    position: absolute;
+    right: 40px;
+    top: 0;
+}
+
+.termos-tec {
+    padding-top: 96px;
+    padding-bottom: 64px;
+}
+
+.tec-item {
+    margin-bottom: 36px;
+}
+
+.tec-title {
+    font-size: 1.5rem;
+    text-align: left;
+    margin-bottom: 24px;
+}
+
+.tec-desc {
+    font-size: 1rem;
+    text-align: left;
+    line-height: 1.5;
+    max-width: 80ch;
+    margin-bottom: 24px;
+}
+
+
+@media (max-width: 1000px) {
+    .tec-title-subtitle {
+        font-size: 1.25rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .tec-title-detail {
+        display: none;
+    }
+}
